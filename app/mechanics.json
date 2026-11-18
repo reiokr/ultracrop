@@ -1,0 +1,303 @@
+{
+  "version": 1,
+  "values": [
+    {
+      "name": "undo history",
+      "group": "editing",
+      "value": 10,
+      "unit": "steps",
+      "source": "ultracrop.py UNDO_LIMIT L73; UltraCrop._push_undo L1577-1583"
+    },
+    {
+      "name": "minimum crop size",
+      "group": "editing",
+      "value": 12,
+      "unit": "px",
+      "source": "ultracrop.py MIN_BOX L72; CropCanvas._on_release L408-423"
+    },
+    {
+      "name": "default crop box",
+      "group": "editing",
+      "value": "none",
+      "source": "ultracrop.py CropCanvas.set_image(keep_box=False) L150-155"
+    },
+    {
+      "name": "crop pixel conversion",
+      "group": "editing",
+      "value": "truncate with int(), clamp to image, min 1 px",
+      "source": "ultracrop.py CropCanvas.get_crop_box L531-543"
+    },
+    {
+      "name": "aspect presets",
+      "group": "editing",
+      "value": "Vaba, 1:1, 16:9, 9:16, 4:3, 3:4, 3:2, 2:3, 5:4",
+      "source": "ultracrop.py _build_body L1043-1053"
+    },
+    {
+      "name": "aspect preset behaviour",
+      "group": "editing",
+      "value": "sets the constraint only, never reshapes the existing box",
+      "source": "ultracrop.py UltraCrop._select_aspect L1298-1305"
+    },
+    {
+      "name": "shift-draw ratio",
+      "group": "editing",
+      "value": 1.0,
+      "source": "ultracrop.py CropCanvas._eff_ratio L229-236"
+    },
+    {
+      "name": "nudge step",
+      "group": "editing",
+      "value": 1,
+      "unit": "px",
+      "source": "ultracrop.py UltraCrop._bind_keys L1183-1190"
+    },
+    {
+      "name": "shift-nudge step",
+      "group": "editing",
+      "value": 10,
+      "unit": "px",
+      "source": "ultracrop.py UltraCrop._bind_keys L1187-1190"
+    },
+    {
+      "name": "zoom minimum",
+      "group": "view",
+      "value": 0.05,
+      "unit": "x absolute",
+      "source": "ultracrop.py CropCanvas.__init__ L126; zoom_by L186-203"
+    },
+    {
+      "name": "zoom maximum",
+      "group": "view",
+      "value": 8.0,
+      "unit": "x absolute",
+      "source": "ultracrop.py CropCanvas.__init__ L127; zoom_by L186-203"
+    },
+    {
+      "name": "wheel zoom step",
+      "group": "view",
+      "value": 1.12,
+      "unit": "x per notch",
+      "source": "ultracrop.py CropCanvas._on_wheel L210-218"
+    },
+    {
+      "name": "zoom button step",
+      "group": "view",
+      "value": "1.25 in / 0.8 out",
+      "source": "ultracrop.py _build_toolbar L923-928; _bind_keys L1175-1176"
+    },
+    {
+      "name": "zoom button clamp",
+      "group": "view",
+      "value": "same absolute 0.05 … 8.0 as the wheel",
+      "source": "ultracrop.py CropCanvas.zoom_by L186-203"
+    },
+    {
+      "name": "fit zoom",
+      "group": "view",
+      "value": "min(canvas_w/iw, canvas_h/ih, 1.0)",
+      "source": "ultracrop.py CropCanvas._fit L157-165"
+    },
+    {
+      "name": "rule of thirds",
+      "group": "view",
+      "value": false,
+      "source": "ultracrop.py CropCanvas.__init__ L138"
+    },
+    {
+      "name": "grid overlay",
+      "group": "view",
+      "value": 6,
+      "unit": "divisions",
+      "source": "ultracrop.py CropCanvas._draw_grid L514-528"
+    },
+    {
+      "name": "grid colour",
+      "group": "view",
+      "value": "#334155",
+      "source": "ultracrop.py CropCanvas._draw_grid L525-528"
+    },
+    {
+      "name": "handle radius",
+      "group": "view",
+      "value": 7,
+      "unit": "px",
+      "source": "ultracrop.py HANDLE_HALF L67; _draw_box L479-483"
+    },
+    {
+      "name": "handle hit tolerance",
+      "group": "view",
+      "value": 9,
+      "unit": "px square (7 + 2)",
+      "source": "ultracrop.py CropCanvas._handle_at L268-272"
+    },
+    {
+      "name": "crop border",
+      "group": "view",
+      "value": "accent 2 px dash (8,4) + white 1 px dash (4,8) offset 6",
+      "source": "ultracrop.py CropCanvas._draw_box L473-477"
+    },
+    {
+      "name": "preview maximum",
+      "group": "view",
+      "value": "234 x 180",
+      "unit": "px",
+      "source": "ultracrop.py UltraCrop._update_preview L1409-1419 (PANEL_W - 56)"
+    },
+    {
+      "name": "maximum texture side",
+      "group": "view",
+      "value": 8192,
+      "unit": "px",
+      "source": "app/src/main.rs MAX_TEXTURE_SIDE (GPU upload guard, not in the original)"
+    },
+    {
+      "name": "export formats",
+      "group": "export",
+      "value": "PNG, JPEG, BMP, TIFF, WebP, plus an all-files filter",
+      "source": "ultracrop.py UltraCrop.save_crop L1678-1682"
+    },
+    {
+      "name": "save suggested name",
+      "group": "export",
+      "value": "karpitud{source_ext}",
+      "source": "ultracrop.py UltraCrop.save_crop L1676"
+    },
+    {
+      "name": "quick save suffix",
+      "group": "export",
+      "value": "_karp, then _karp2, _karp3 ...",
+      "source": "ultracrop.py UltraCrop.quick_save L1688-1703"
+    },
+    {
+      "name": "jpeg export",
+      "group": "export",
+      "value": "convert to RGB (drop alpha)",
+      "source": "ultracrop.py UltraCrop._write_image L1705-1713"
+    },
+    {
+      "name": "clipboard encoding",
+      "group": "export",
+      "value": "PNG of crop, or full image when no box",
+      "source": "ultracrop.py UltraCrop.copy_to_clipboard L1716-1746"
+    },
+    {
+      "name": "resize link formula",
+      "group": "export",
+      "value": "h = round(w * ih / iw); w = round(h * iw / ih); min 1",
+      "source": "ultracrop.py _on_resize_w_changed L1339-1353; _on_resize_h_changed L1355-1369"
+    },
+    {
+      "name": "resize filter",
+      "group": "export",
+      "value": "LANCZOS, colour mode preserved",
+      "source": "ultracrop.py UltraCrop._apply_resize L1371-1392"
+    },
+    {
+      "name": "recent files",
+      "group": "input",
+      "value": 8,
+      "unit": "entries",
+      "source": "ultracrop.py MAX_RECENT L66; _add_recent L801-808"
+    },
+    {
+      "name": "image extensions",
+      "group": "input",
+      "value": ".png .jpg .jpeg .bmp .gif .tiff .tif .webp .ico",
+      "source": "ultracrop.py IMAGE_EXTS L74"
+    },
+    {
+      "name": "window fit formula",
+      "group": "window",
+      "value": "w=min(max(iw+360,820),screen_w*0.88); h=min(max(ih+175,560),screen_h*0.86)",
+      "source": "ultracrop.py UltraCrop._compute_fit_size L758-766"
+    },
+    {
+      "name": "window sizing on open",
+      "group": "window",
+      "value": "tiny image: normal default window; fits: image plus chrome; bigger than the screen: fullscreen with the image fitted inside",
+      "source": "owner request 2026-11-03; app/src/main.rs fit_window_to_image"
+    },
+    {
+      "name": "window minimum",
+      "group": "window",
+      "value": "820 x 540",
+      "unit": "px",
+      "source": "ultracrop.py UltraCrop.__init__ L718"
+    },
+    {
+      "name": "side panel width",
+      "group": "window",
+      "value": 320,
+      "unit": "px total (290 inner)",
+      "source": "ultracrop.py PANEL_W/SIDE_W L68-69"
+    },
+    {
+      "name": "drag and drop",
+      "group": "input",
+      "value": true,
+      "source": "ultracrop.py UltraCrop._on_drop L1193-1196"
+    },
+    {
+      "name": "open colour mode",
+      "group": "input",
+      "value": "RGB, or RGBA when the source has alpha",
+      "source": "ultracrop.py UltraCrop._open_file L1457-1460"
+    },
+    {
+      "name": "empty canvas text",
+      "group": "view",
+      "value": "Lohista fail siia  ·  Ctrl+O",
+      "source": "ultracrop.py CropCanvas.redraw L432-434"
+    },
+    {
+      "name": "mirror status text",
+      "group": "editing",
+      "value": "Peegeldata horisontaalselt / vertikaalselt",
+      "source": "ultracrop.py UltraCrop.flip L1652, L1655"
+    },
+    {
+      "name": "save with no image text",
+      "group": "export",
+      "value": "Kõigepealt ava pilt!",
+      "source": "ultracrop.py UltraCrop.save_crop L1669"
+    },
+    {
+      "name": "zoom label rounding",
+      "group": "view",
+      "value": "truncate int(zoom x 100), never round",
+      "source": "decompiled bytecode UltraCrop._update_zoom_label+0x002C (LOAD_GLOBAL int), +0x0060 (100)"
+    },
+    {
+      "name": "zoom label percent",
+      "group": "view",
+      "value": "absolute scale x 100",
+      "source": "decompiled bytecode UltraCrop._update_zoom_label+0x0038..0x006E; label seeded '100%' at UltraCrop.__init__+0x01E2"
+    },
+    {
+      "name": "crop box rejection threshold",
+      "group": "editing",
+      "value": 1,
+      "unit": "px per side when reading the box",
+      "source": "decompiled bytecode CropCanvas.get_crop_box+0x0232 (LOAD_SMALL_INT 1)"
+    },
+    {
+      "name": "quick save counter start",
+      "group": "export",
+      "value": 2,
+      "source": "decompiled bytecode UltraCrop.quick_save+0x0126 (LOAD_SMALL_INT 2)"
+    },
+    {
+      "name": "window fit enforcement",
+      "group": "window",
+      "value": "4.0 s, 3 px tolerance, late checks at 250/500/900/1500/2500 ms",
+      "source": "decompiled bytecode _fit_window_to_image+0x0162 (4.0), +0x01AA (delay tuple); _schedule_enforce+0x016C (3)"
+    },
+    {
+      "name": "single instance socket",
+      "group": "input",
+      "value": "/tmp/ultracrop-<uid>.sock, 1.0 s connect, 16-byte ack, b\"OK\", 150 ms poll",
+      "source": "decompiled bytecode _send_to_instance+0x0080/+0x010C/+0x0138; _start_ipc_server+0x0180"
+    }
+  ]
+}

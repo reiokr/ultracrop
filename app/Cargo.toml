@@ -1,0 +1,16 @@
+[package]
+name = "ultracrop"
+version = "2.0.0"
+edition = "2021"
+description = "UltraCrop – a fast, good-looking image cropper written in Rust"
+
+[dependencies]
+eframe = { version = "0.29", default-features = false, features = ["glow", "default_fonts", "x11", "wayland"] }
+image = { version = "0.25", default-features = false, features = ["png", "jpeg", "gif", "bmp", "tiff", "webp", "ico"] }
+rfd = "0.15"
+arboard = "3.4"
+
+[profile.release]
+opt-level = 2
+lto = "thin"
+strip = true

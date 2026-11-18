@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs>
+    <linearGradient id="linear-gradient-1" x1="512" y1="960" x2="512" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1b1b36"/>
+      <stop offset="0.55" stop-color="#121223"/>
+      <stop offset="1" stop-color="#08080f"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="512" y1="724" x2="512" y2="300" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0ea5e9"/>
+      <stop offset="0.45" stop-color="#6366f1"/>
+      <stop offset="1" stop-color="#ec4899"/>
+    </linearGradient>
+  </defs>
+  <title>UltraCrop</title>
+  <g id="Layer_1" data-name="Layer 1">
+    <path id="Tile" d="M264 64 L760 64 C870.457 64 960 153.543 960 264 L960 760 C960 870.457 870.457 960 760 960 L264 960 C153.543 960 64 870.457 64 760 L64 264 C64 153.543 153.543 64 264 64 Z" fill="url(#linear-gradient-1)" stroke="#2a2a52" stroke-width="4" stroke-miterlimit="10"/>
+    <path id="Photo_shadow" data-name="Photo shadow" d="M336 316 L712 316 C725.255 316 736 326.745 736 340 L736 716 C736 729.255 725.255 740 712 740 L336 740 C322.745 740 312 729.255 312 716 L312 340 C312 326.745 322.745 316 336 316 Z" fill="#000000" stroke="#2a2a52" stroke-width="4" stroke-miterlimit="10" opacity="0.35"/>
+    <path id="Photo" d="M324 300 L700 300 C713.255 300 724 310.745 724 324 L724 700 C724 713.255 713.255 724 700 724 L324 724 C310.745 724 300 713.255 300 700 L300 324 C300 310.745 310.745 300 324 300 Z" fill="url(#linear-gradient-2)" stroke="#ffffff" stroke-width="6" stroke-miterlimit="10"/>
+    <circle id="Sun_glow" data-name="Sun glow" cx="560" cy="420" r="82" fill="#f59e0b" stroke="#ffffff" stroke-width="6" stroke-miterlimit="10" opacity="0.22"/>
+    <circle id="Sun" cx="560" cy="420" r="56" fill="#f59e0b" stroke="#ffffff" stroke-width="6" stroke-miterlimit="10"/>
+    <polygon id="Mountain_back" data-name="Mountain back" points="330,700 420,500 520,700" fill="#0f766e" stroke="#ffffff" stroke-width="6" stroke-miterlimit="10"/>
+    <polygon id="Mountain_front" data-name="Mountain front" points="460,700 590,530 694,700" fill="#134e4a" stroke="#ffffff" stroke-width="6" stroke-miterlimit="10"/>
+    <polygon id="Snow_cap" data-name="Snow cap" points="420,500 446,548 394,548" fill="#e2e8f0" stroke="#ffffff" stroke-width="6" stroke-miterlimit="10"/>
+    <polyline id="Crop_TL" data-name="Crop TL" points="250,380 250,250 380,250" fill="none" stroke="#6366f1" stroke-width="36" stroke-linecap="round" stroke-linejoin="round"/>
+    <polyline id="Crop_TR" data-name="Crop TR" points="644,250 774,250 774,380" fill="none" stroke="#6366f1" stroke-width="36" stroke-linecap="round" stroke-linejoin="round"/>
+    <polyline id="Crop_BL" data-name="Crop BL" points="250,644 250,774 380,774" fill="none" stroke="#6366f1" stroke-width="36" stroke-linecap="round" stroke-linejoin="round"/>
+    <polyline id="Crop_BR" data-name="Crop BR" points="644,774 774,774 774,644" fill="none" stroke="#6366f1" stroke-width="36" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle id="Handle_TL" data-name="Handle TL" cx="250" cy="250" r="28" fill="#ffffff" stroke="#6366f1" stroke-width="10" stroke-miterlimit="10"/>
+    <circle id="Handle_TR" data-name="Handle TR" cx="774" cy="250" r="28" fill="#ffffff" stroke="#6366f1" stroke-width="10" stroke-miterlimit="10"/>
+    <circle id="Handle_BL" data-name="Handle BL" cx="250" cy="774" r="28" fill="#ffffff" stroke="#6366f1" stroke-width="10" stroke-miterlimit="10"/>
+    <circle id="Handle_BR" data-name="Handle BR" cx="774" cy="774" r="28" fill="#ffffff" stroke="#6366f1" stroke-width="10" stroke-miterlimit="10"/>
+  </g>
+</svg>
